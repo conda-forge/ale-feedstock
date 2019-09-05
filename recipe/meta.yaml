@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/USGS-Astrogeology/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 473fb1ffb3ca2963b0a2ebd426d9eb07689ff40e62af559c502c52124dbf2c74 
+  sha256: 49406e1214e76be01d16b1b16205afa70984b996e26e9cde9c8913d86a427124
 
 build:
   number: 0
@@ -20,11 +20,13 @@ requirements:
     - python >=3
     - eigen
     - gsl
+    - nlohmann_json
     - pip
   run:
     - eigen
     - gsl
     - networkx
+    - nlohmann_json
     - numpy
     - numba
     - pvl

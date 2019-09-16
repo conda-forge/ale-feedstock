@@ -7,6 +7,8 @@ package:
 source:
   url: https://github.com/USGS-Astrogeology/{{ name }}/archive/{{ version }}.tar.gz
   sha256: 49406e1214e76be01d16b1b16205afa70984b996e26e9cde9c8913d86a427124
+  patches:
+     - patches/cmake_targets.patch
 
 build:
   number: 0

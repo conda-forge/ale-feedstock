@@ -1,0 +1,70 @@
+From d0fa8cc1fa784e822d58384bcdd111d2fa1f403a Mon Sep 17 00:00:00 2001
+From: Jesse Mapel <jmapel@usgs.gov>
+Date: Thu, 12 Sep 2019 08:41:58 -0700
+Subject: [PATCH] Changed CMake setup to use targets instead of variables
+ (#269)
+
+* Moved json to a target
+
+* Moved other dependencies to targets
+
+* Removed cmake Python version requirement
+---
+ CMakeLists.txt | 20 ++++++++++----------
+ 1 file changed, 10 insertions(+), 10 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index f087eeb..fe90782 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -17,7 +17,8 @@ set(CMAKE_CXX_STANDARD 11)
+ # Third Party Dependencies
+ find_package(GSL    REQUIRED)
+ find_package(Eigen3 3.3 REQUIRED NO_MODULE)
+-find_package(PythonLibs REQUIRED COMPONENTS Development Interpreter Compiler)
++find_package(Python REQUIRED COMPONENTS Development)
++find_package(nlohmann_json REQUIRED)
+ 
+ # Library setup
+ add_library(ale SHARED
+@@ -25,21 +26,19 @@ add_library(ale SHARED
+ set_target_properties(ale PROPERTIES
+     VERSION ${PROJECT_VERSION}
+     SOVERSION 1)
+-set(ALE_INCLUDE_DIRS "${CMAKE_CURRENT_SOURCE_DIR}/include/"
+-                     "${CMAKE_CURRENT_SOURCE_DIR}/include/json")
++set(ALE_INCLUDE_DIRS "${CMAKE_CURRENT_SOURCE_DIR}/include/")
+ 
+ target_include_directories(ale
+-                           PRIVATE
+-                           ${GSL_INCLUDE_DIRS}
+-                           ${EIGEN3_INCLUDE_DIR}
+-                           ${PYTHON_INCLUDE_DIR}
+                            PUBLIC
+                            ${ALE_INCLUDE_DIRS})
+ 
+  target_link_libraries(ale
+                        PRIVATE
+-                       ${GSL_LIBRARIES}
+-                       ${PYTHON_LIBRARY})
++                       GSL::gsl
++                       GSL::gslcblas
++                       Eigen3::Eigen
++                       Python::Python
++                       nlohmann_json::nlohmann_json)
+ 
+ # Optional build tests
+ option (BUILD_TESTS "Build tests" ON)
+@@ -52,7 +51,8 @@ if(BUILD_TESTS)
+ 
+   target_link_libraries(ale
+                         PRIVATE
+-                        ${GSL_LIBRARIES}
++                        GSL::gsl
++                        GSL::gslcblas
+                         ${PYTHON_LIBRARY}
+                         PUBLIC
+                         gtest ${CMAKE_THREAD_LIBS_INIT})
+-- 
+2.17.1 (Apple Git-112)
+

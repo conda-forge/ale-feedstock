@@ -1,12 +1,12 @@
 {% set name = "ale" %}
-{% set version = "0.4.0" %}
+{% set version = "0.5.0" %}
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
   url: https://github.com/USGS-Astrogeology/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 49406e1214e76be01d16b1b16205afa70984b996e26e9cde9c8913d86a427124
+  sha256: 81e0de8e576119ef7a2d861a97cdb419ff0cf86438e1f8d7f0532f4c3ec268d4
   patches:
      - patches/cmake_targets.patch
 

@@ -34,7 +34,7 @@ requirements:
     - python-dateutil
     - quaternion
     - scipy
-    - spiceypy >=2.2.2
+    - spiceypy >=2.3.0
     - pyyaml
 
 test:

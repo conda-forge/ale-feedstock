@@ -40,6 +40,10 @@ requirements:
 test:
   imports:
     - ale
+  commands:
+    - conda inspect linkages -p $PREFIX $PKG_NAME
+    - test -e $PREFIX/lib/libusgscsm${SHLIB_EXT}
+    - test -e $PREFIX/include/ale.h
 
 about:
   home: https://github.com/USGS-Astrogeology/ale

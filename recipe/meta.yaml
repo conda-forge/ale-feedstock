@@ -42,7 +42,7 @@ test:
     - ale
   commands:
     - conda inspect linkages -p $PREFIX $PKG_NAME
-    - test -e $PREFIX/lib/libusgscsm${SHLIB_EXT}
+    - test -e $PREFIX/lib/libale${SHLIB_EXT}
     - test -e $PREFIX/include/ale.h
 
 about:

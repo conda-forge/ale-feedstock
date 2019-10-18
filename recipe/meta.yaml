@@ -1,12 +1,12 @@
 {% set name = "ale" %}
-{% set version = "0.6.1" %}
+{% set version = "0.6.2" %}
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
   url: https://github.com/USGS-Astrogeology/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 6c1ffc76304fe8e77e6d8eb35bdc8d9d7d213551917f8715de67379eb94585aa
+  sha256: 1deb3b5dd74b7eca6b03b6299f80cee4aa8d685d14ae8b436baf4d197b508099
 
 build:
   number: 0

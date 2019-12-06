@@ -29,7 +29,7 @@ requirements:
     - nlohmann_json
     - numpy
     - pvl
-    - python >=3
+    - python
     - python-dateutil
     - scipy
     - spiceypy >=2.3.0

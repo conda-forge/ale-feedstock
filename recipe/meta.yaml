@@ -17,7 +17,7 @@ build:
 requirements:
   build:
     - {{ compiler('cxx') }}
-    - cmake >=3.12
+    - cmake >=3.10
   host:
     - python
     - eigen

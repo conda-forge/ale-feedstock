@@ -4,23 +4,23 @@ index 62ed676..ff17a39 100644
 +++ CMakeLists.txt
 @@ -5,8 +5,8 @@
  # CMake initialization
- 
+
  # Specify the required version of CMake.
 -# cmake 3.10 required for ctest/gtest integration
 -cmake_minimum_required(VERSION 3.10)
 +# cmake 3.12 required for CMake policy CMP0074ß
 +cmake_minimum_required(VERSION 3.12)
  project(ale VERSION 0.6.5 DESCRIPTION "Abstraction Library for Ephemerides ")
- 
+
  # include what we need
 @@ -15,6 +15,12 @@ include(GNUInstallDirs)
  set(CMAKE_CXX_STANDARD 11)
- 
+
  # Third Party Dependencies
 +if(EXISTS $ENV{CONDA_PREFIX})
 +  message("Using CONDA PREFIX: $ENV{CONDA_PREFIX} to find Python")
 +  cmake_policy(SET CMP0074 NEW)
-+  set(Python_ROOT $ENV{CONDA_PREFIX})
++  set(Python_ROOT_DIR $ENV{CONDA_PREFIX})
 +endif()
 +
  find_package(GSL           REQUIRED)

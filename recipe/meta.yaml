@@ -11,7 +11,7 @@ source:
     - patches/Python_3_6.patch  # [py==36]
 
 build:
-  number: 2
+  number: 3
   skip: True  # [win or py2k]
 
 requirements:

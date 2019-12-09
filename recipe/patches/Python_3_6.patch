@@ -1,0 +1,13 @@
+diff --git CMakeLists.txt CMakeLists.txt
+index 0f810b2..341257c 100644
+--- CMakeLists.txt
++++ CMakeLists.txt
+@@ -25,7 +25,7 @@ endif()
+ 
+ find_package(GSL           REQUIRED)
+ find_package(Eigen3 3.3    REQUIRED NO_MODULE)
+-find_package(Python        REQUIRED COMPONENTS Development)
++find_package(Python 3.6    REQUIRED COMPONENTS Development)
+ find_package(nlohmann_json REQUIRED)
+ 
+ # Library setup

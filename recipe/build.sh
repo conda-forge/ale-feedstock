@@ -3,6 +3,7 @@
 set -e # Abort on error
 
 mkdir build && cd build
+ls -al $PREFIX/lib/libpython*
 cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$PREFIX -DCMAKE_INSTALL_LIBDIR=lib -DBUILD_TESTS=OFF ..
 cmake --build . --target install
 cd ..

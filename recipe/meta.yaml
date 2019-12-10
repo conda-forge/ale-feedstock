@@ -8,7 +8,7 @@ source:
   url: https://github.com/USGS-Astrogeology/{{ name }}/archive/{{ version }}.tar.gz
   sha256: 591c9a271a1b2187162f845462ae0c982c3bf0be85440233b3748874da95fc8b
   patches:
-    - patches/Python_3_6.patch  # [py==36]
+    - patches/Python_PATH.patch
 
 build:
   number: 0

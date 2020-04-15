@@ -38,7 +38,7 @@ test:
   commands:
     - conda inspect linkages -p $PREFIX $PKG_NAME
     - test -e $PREFIX/lib/libale${SHLIB_EXT}
-    - test -e $PREFIX/include/ale/ale.h
+    - test -e $PREFIX/include/ale/Load.h
 
 about:
   home: https://github.com/USGS-Astrogeology/ale

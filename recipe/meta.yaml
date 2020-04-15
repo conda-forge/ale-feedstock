@@ -16,15 +16,12 @@ requirements:
   build:
     - {{ compiler('cxx') }}
     - cmake >=3.10
+    - eigen
   host:
     - python
-    - eigen
-    - gsl
     - nlohmann_json
     - pip
   run:
-    - eigen
-    - gsl
     - networkx
     - nlohmann_json
     - numpy

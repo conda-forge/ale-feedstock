@@ -12,11 +12,10 @@ source:
 
 build:
   number: 0
-  skip: true  # [win or py2k]
+  skip: true  # [py2k]
 
 requirements:
   build:
-    - {{ compiler('cxx') }}
     - cmake >=3.10
     - eigen
   host:
@@ -38,9 +37,10 @@ test:
   imports:
     - ale
   commands:
-    - conda inspect linkages -p $PREFIX $PKG_NAME
-    - test -e $PREFIX/lib/libale${SHLIB_EXT}
-    - test -e $PREFIX/include/ale/Load.h
+    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
+    - test -e $PREFIX/lib/libale${SHLIB_EXT}  # [unix]
+    - if not exist %LIBRARY_BIN%\ale.dll exit 1  # [win]
+    - if not exist %LIBRARY_LIB%\ale.lib exit 1  # [win]
 
 about:
   home: https://github.com/USGS-Astrogeology/ale

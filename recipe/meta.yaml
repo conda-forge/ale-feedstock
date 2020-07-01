@@ -11,7 +11,7 @@ source:
     - patches/python_36.patch  # [py==36]
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py2k]
 
 requirements:

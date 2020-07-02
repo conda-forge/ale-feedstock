@@ -1,5 +1,5 @@
 diff --git CMakeLists.txt CMakeLists.txt
-index 07d0d9b..1fa8d94 100644
+index 07d0d9b..aaed9f4 100644
 --- CMakeLists.txt
 +++ CMakeLists.txt
 @@ -7,7 +7,7 @@
@@ -15,9 +15,11 @@ index 07d0d9b..1fa8d94 100644
    # If there is an Anaconda environment activated, search that for Python first
    if(EXISTS $ENV{CONDA_PREFIX})
      message("Searching $ENV{CONDA_PREFIX} for Python libraries")
-+    set(Python_FIND_VIRTUALENV FIRST)
-     set(Python_ROOT_DIR $ENV{CONDA_PREFIX})
-     set(Python_FIND_STRATEGY LOCATION)
+-    set(Python_ROOT_DIR $ENV{CONDA_PREFIX})
+-    set(Python_FIND_STRATEGY LOCATION)
++    set(Python_FIND_VIRTUALENV ONLY)
++#    set(Python_ROOT_DIR $ENV{CONDA_PREFIX})
++#    set(Python_FIND_STRATEGY LOCATION)
    endif()
 -  find_package(Python REQUIRED COMPONENTS Development)
 +  find_package(Python REQUIRED COMPONENTS Interpreter Development)

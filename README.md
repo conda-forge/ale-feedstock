@@ -5,7 +5,7 @@ Home: https://github.com/USGS-Astrogeology/ale
 
 Package license: The Unlicense
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Abstraction Library for Ephemerides (ALE) for extracting and processing planetary sensor ephemeris data.
 

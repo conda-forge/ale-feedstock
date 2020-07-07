@@ -4,8 +4,6 @@ cd build
 cmake   -GNinja ^
         -DCMAKE_WINDOWS_EXPORT_ALL_SYMBOLS=ON ^
         -DALE_BUILD_TESTS=OFF ^
-        -DALE_USE_EXTERNAL_JSON=ON ^
-        -DALE_USE_EXTERNAL_EIGEN=ON ^
         -DCMAKE_BUILD_TYPE=Release ^
         -DCMAKE_INSTALL_PREFIX="%PREFIX%" ^
         -DCMAKE_INSTALL_LIBDIR="%LIBRARY_LIB%" ^

@@ -43,7 +43,7 @@ test:
 
 about:
   home: https://github.com/USGS-Astrogeology/ale
-  license: The Unlicense
+  license: Unlicense
   license_file: LICENSE
   summary: Abstraction Library for Ephemerides (ALE) for extracting and processing planetary sensor ephemeris data.
 

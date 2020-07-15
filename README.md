@@ -3,7 +3,7 @@ About ale
 
 Home: https://github.com/USGS-Astrogeology/ale
 
-Package license: The Unlicense
+Package license: Unlicense
 
 Feedstock license: BSD-3-Clause
 

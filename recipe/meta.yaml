@@ -9,7 +9,7 @@ source:
   sha256: fb9c92f59be3d089dc8908f2c7e0479a89b88171bf7b715261f83ed20d428c6c
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py2k]
 
 requirements:
@@ -37,7 +37,6 @@ test:
   imports:
     - ale
   commands:
-    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
     - test -e $PREFIX/lib/libale${SHLIB_EXT}  # [unix]
     - if not exist %LIBRARY_BIN%\ale.dll exit 1  # [win]
     - if not exist %LIBRARY_LIB%\ale.lib exit 1  # [win]

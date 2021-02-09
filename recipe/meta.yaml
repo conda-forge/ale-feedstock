@@ -17,6 +17,7 @@ requirements:
     - {{ compiler('cxx') }}
     - cmake >=3.15
     - eigen
+    - pytest
   host:
     - python
     - nlohmann_json
@@ -29,7 +30,7 @@ requirements:
     - python
     - python-dateutil
     - pytz
-    - scipy >=1.2.0
+    - scipy >=1.2.0,<1.6.0
     - spiceypy >=2.3.0
     - pyyaml
 
@@ -40,6 +41,7 @@ test:
     - test -e $PREFIX/lib/libale${SHLIB_EXT}  # [unix]
     - if not exist %LIBRARY_BIN%\ale.dll exit 1  # [win]
     - if not exist %LIBRARY_LIB%\ale.lib exit 1  # [win]
+    - pytest tests/pytests -vv
 
 about:
   home: https://github.com/USGS-Astrogeology/ale

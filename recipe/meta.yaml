@@ -23,6 +23,7 @@ requirements:
     - python
     - nlohmann_json
     - pip
+    - setuptools
   run:
     - networkx
     - nlohmann_json
@@ -34,8 +35,11 @@ requirements:
     - scipy >=1.2.0,<1.6.0
     - spiceypy >=2.3.0
     - pyyaml
+    - setuptools
 
 test:
+  requires:
+    - setuptools
   imports:
     - ale
   commands:

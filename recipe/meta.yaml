@@ -7,8 +7,6 @@ package:
 source:
   url: https://github.com/USGS-Astrogeology/{{ name }}/archive/{{ version }}.tar.gz
   sha256: c3fa2405068150184f2e2717b1869e851030b09e5a16a21790efae89bb6011a9
-  patches:
-    - patches/parse.patch
 
 build:
   number: 0
@@ -32,7 +30,7 @@ requirements:
     - python
     - python-dateutil
     - pytz
-    - scipy >=1.2.0,<1.6.0
+    - scipy >=1.4.0
     - spiceypy >=2.3.0
     - pyyaml
     - setuptools

@@ -1,5 +1,5 @@
 {% set name = "ale" %}
-{% set version = "0.8.7" %}
+{% set version = "0.8.8" %}
 package:
   name: {{ name|lower }}
   version: {{ version }}
@@ -9,7 +9,7 @@ source:
   sha256: 7bf792b96d7a1e2ae70428b6d76d1273603054ef2331214ebe127206fcca5b04
 
 build:
-  number: 5
+  number: 0
   skip: true  # [py2k]
 
 requirements:

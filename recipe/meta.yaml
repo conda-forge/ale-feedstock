@@ -1,15 +1,15 @@
 {% set name = "ale" %}
-{% set version = "0.8.7" %}
+{% set version = "0.8.8" %}
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
   url: https://github.com/USGS-Astrogeology/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 7bf792b96d7a1e2ae70428b6d76d1273603054ef2331214ebe127206fcca5b04
+  sha256: ebaa8ab8a1c2146f28b8b44cd0e56990f50fbae503244ecf6e48af4e62249cef
 
 build:
-  number: 4
+  number: 0
   skip: true  # [py2k]
 
 requirements:
@@ -48,8 +48,8 @@ test:
 
 about:
   home: https://github.com/USGS-Astrogeology/ale
-  license: Unlicense
-  license_file: LICENSE
+  license: CC0-1.0
+  license_file: LICENSE.md
   summary: Abstraction Library for Ephemerides (ALE) for extracting and processing planetary sensor ephemeris data.
 
 extra:
@@ -57,3 +57,4 @@ extra:
     - jlaura
     - jessemapel
     - andrewannex
+    - acpaquette

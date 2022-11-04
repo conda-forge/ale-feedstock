@@ -19,7 +19,7 @@ requirements:
     - make
     - eigen
   host:
-    - python <3.10
+    - python 
     - nlohmann_json
     - pip
     - setuptools
@@ -28,7 +28,7 @@ requirements:
     - {{ pin_compatible('nlohmann_json', min_pin='x.x', max_pin='x.x') }}
     - numpy
     - pvl >=1.0
-    - python <3.10
+    - python 
     - python-dateutil
     - pytz
     - scipy >=1.4.0

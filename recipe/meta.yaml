@@ -9,7 +9,7 @@ source:
   sha256: 7bf792b96d7a1e2ae70428b6d76d1273603054ef2331214ebe127206fcca5b04
 
 build:
-  number: 3
+  number: 4
   skip: true  # [py2k]
 
 requirements:
@@ -56,3 +56,4 @@ extra:
   recipe-maintainers:
     - jlaura
     - jessemapel
+    - andrewannex

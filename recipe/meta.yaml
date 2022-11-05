@@ -47,7 +47,7 @@ test:
     - test -e $PREFIX/lib/libale${SHLIB_EXT}  # [unix]
     - if not exist %LIBRARY_BIN%\ale.dll exit 1  # [win]
     - if not exist %LIBRARY_LIB%\ale.lib exit 1  # [win]
-    - "isd_generate"
+    - "isd_generate --version"
 
 about:
   home: https://github.com/USGS-Astrogeology/ale

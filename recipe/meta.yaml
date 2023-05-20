@@ -1,15 +1,15 @@
 {% set name = "ale" %}
-{% set version = "0.8.8" %}
+{% set version = "0.9.0" %}
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
   url: https://github.com/USGS-Astrogeology/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: ebaa8ab8a1c2146f28b8b44cd0e56990f50fbae503244ecf6e48af4e62249cef
+  sha256: 6fa10ef9fb5d85d3627d91e13e38a49308adf2d02726b09bf0560986c0d3a91e
 
 build:
-  number: 1
+  number: 0
   entry_points:
     - isd_generate = ale.isd_generate:main
   skip: true  # [py2k]
@@ -47,7 +47,7 @@ test:
     - test -e $PREFIX/lib/libale${SHLIB_EXT}  # [unix]
     - if not exist %LIBRARY_BIN%\ale.dll exit 1  # [win]
     - if not exist %LIBRARY_LIB%\ale.lib exit 1  # [win]
-    - "isd_generate --version"
+    - isd_generate --version
 
 about:
   home: https://github.com/USGS-Astrogeology/ale

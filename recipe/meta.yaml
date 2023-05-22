@@ -5,7 +5,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/USGS-Astrogeology/{{ name }}/archive/{{ version }}.tar.gz
+  url: https://github.com/DOI-USGS/{{ name }}/archive/{{ version }}.tar.gz
   sha256: 6fa10ef9fb5d85d3627d91e13e38a49308adf2d02726b09bf0560986c0d3a91e
 
 build:

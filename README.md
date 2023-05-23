@@ -1,11 +1,11 @@
-About ale
-=========
+About ale-feedstock
+===================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ale-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/USGS-Astrogeology/ale
 
 Package license: CC0-1.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ale-feedstock/blob/main/LICENSE.txt)
 
 Summary: Abstraction Library for Ephemerides (ALE) for extracting and processing planetary sensor ephemeris data.
 

@@ -3,7 +3,7 @@ About ale-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ale-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/DOI-USGS/ale/
+Home: https://github.com/DOI-USGS/ale
 
 Package license: CC0-1.0
 

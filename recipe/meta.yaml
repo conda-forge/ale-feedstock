@@ -9,7 +9,7 @@ source:
   sha256: ce830a57333edfc6dea5265dcc14e351c520b64b9f19e790da60fccc3bfe6336
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - isd_generate = ale.isd_generate:main
   skip: true  # [py2k]

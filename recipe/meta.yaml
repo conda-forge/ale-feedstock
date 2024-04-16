@@ -9,7 +9,7 @@ source:
   sha256: 727a246820b24995c00391602405e1e4e39c1b26d9c9bdb12e7aa87c7368e017
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - isd_generate = ale.isd_generate:main
   skip: true  # [py2k]
@@ -29,7 +29,7 @@ requirements:
     - setuptools
   run:
     - networkx
-    - {{ pin_compatible('nlohmann_json', min_pin='x.x', max_pin='x.x') }}
+    - {{ pin_compatible('nlohmann_json', min_pin='x.x.x', max_pin='x.x.x') }}
     - numpy
     - pvl >=1.0
     - python

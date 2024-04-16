@@ -30,7 +30,7 @@ requirements:
     - setuptools
   run:
     - networkx
-    - {{ pin_compatible('nlohmann_json', min_pin='x.x', max_pin='x.x') }}
+    - {{ pin_compatible('nlohmann_json', min_pin='x.x.x', max_pin='x.x.x') }}
     - numpy
     - pvl >=1.0
     - python

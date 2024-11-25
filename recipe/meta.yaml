@@ -11,7 +11,7 @@ source:
     - patches/0001-Address-gdal-warning.patch
 
 build:
-  number: 1
+  number: 2
   entry_points:
     - isd_generate = ale.isd_generate:main
   skip: true  # [py2k]

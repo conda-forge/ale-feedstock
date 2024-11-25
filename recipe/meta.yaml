@@ -7,6 +7,8 @@ package:
 source:
   url: https://github.com/DOI-USGS/{{ name }}/archive/{{ version }}.tar.gz
   sha256: 727a246820b24995c00391602405e1e4e39c1b26d9c9bdb12e7aa87c7368e017
+  patches:
+    - patches/0001-Address-gdal-warning.patch
 
 build:
   number: 1

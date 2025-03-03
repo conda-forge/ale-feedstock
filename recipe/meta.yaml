@@ -9,9 +9,10 @@ source:
   sha256: 727a246820b24995c00391602405e1e4e39c1b26d9c9bdb12e7aa87c7368e017
   patches:
     - patches/0001-Address-gdal-warning.patch
+    - patches/0002-Fix-CrismIsisLabelNaifSpice-driver-to-handle-VNIR-an.patch
 
 build:
-  number: 2
+  number: 3
   entry_points:
     - isd_generate = ale.isd_generate:main
   skip: true  # [py2k]

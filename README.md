@@ -296,6 +296,7 @@ Feedstock Maintainers
 =====================
 
 * [@acpaquette](https://github.com/acpaquette/)
+* [@amystamile-usgs](https://github.com/amystamile-usgs/)
 * [@andrewannex](https://github.com/andrewannex/)
 * [@jessemapel](https://github.com/jessemapel/)
 * [@jlaura](https://github.com/jlaura/)

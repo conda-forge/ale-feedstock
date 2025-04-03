@@ -9,7 +9,7 @@ source:
   sha256: f8aaaaac2a82205d5c25f155567775225e4bde5863bb75eb0e3c47ee47810329
   patches:
     # - patches/0001-Address-gdal-warning.patch
-    - patches/0002-Fix-CrismIsisLabelNaifSpice-driver-to-handle-VNIR-an.patch
+    # - patches/0002-Fix-CrismIsisLabelNaifSpice-driver-to-handle-VNIR-an.patch
 
 build:
   number: 0

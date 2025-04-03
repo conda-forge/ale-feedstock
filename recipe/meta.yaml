@@ -26,12 +26,14 @@ requirements:
     - cmake >=3.15
     - make
     - eigen
+    - gdal
   host:
     - python
     - nlohmann_json
     - pip
     - setuptools
   run:
+    - gdal
     - networkx
     - {{ pin_compatible('nlohmann_json', min_pin='x.x', max_pin='x.x') }}
     - numpy

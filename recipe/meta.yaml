@@ -1,18 +1,15 @@
 {% set name = "ale" %}
-{% set version = "0.10.0" %}
+{% set version = "0.11.0" %}
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
   url: https://github.com/DOI-USGS/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 727a246820b24995c00391602405e1e4e39c1b26d9c9bdb12e7aa87c7368e017
-  patches:
-    - patches/0001-Address-gdal-warning.patch
-    - patches/0002-Fix-CrismIsisLabelNaifSpice-driver-to-handle-VNIR-an.patch
+  sha256: f8aaaaac2a82205d5c25f155567775225e4bde5863bb75eb0e3c47ee47810329
 
 build:
-  number: 3
+  number: 0
   entry_points:
     - isd_generate = ale.isd_generate:main
   skip: true  # [py2k]
@@ -26,6 +23,7 @@ requirements:
     - cmake >=3.15
     - make
     - eigen
+    - brotli-python
   host:
     - python
     - nlohmann_json
@@ -43,6 +41,7 @@ requirements:
     - spiceypy >=2.3.0
     - pyyaml
     - setuptools
+    - brotli-python
 
 test:
   requires:

@@ -26,7 +26,7 @@ requirements:
     - cmake >=3.15
     - make
     - eigen
-    - brotli
+    - brotli-python
   host:
     - python
     - nlohmann_json
@@ -44,7 +44,7 @@ requirements:
     - spiceypy >=2.3.0
     - pyyaml
     - setuptools
-    - brotli
+    - brotli-python
 
 test:
   requires:

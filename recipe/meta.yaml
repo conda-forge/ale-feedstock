@@ -23,7 +23,6 @@ requirements:
     - cmake >=3.15
     - make
     - eigen
-    - brotli-python
   host:
     - python
     - nlohmann_json

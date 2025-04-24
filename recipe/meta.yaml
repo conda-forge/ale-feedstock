@@ -37,7 +37,7 @@ requirements:
     - python-dateutil
     - pytz
     - scipy >=1.4.0
-    - spiceypy >=2.3.0
+    - spiceypy >=6.0.0
     - pyyaml
     - setuptools
     - brotli-python

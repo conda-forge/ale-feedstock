@@ -1,15 +1,15 @@
 {% set name = "ale" %}
-{% set version = "0.11.0" %}
+{% set version = "1.0.0" %}
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
   url: https://github.com/DOI-USGS/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: b7259b156182b374b66c76c2ab818dcd13f7a1881e6fc00aa6043b72fe357997
+  sha256: 60acafd7048eb250549267d7bfff23787742bc7cac5539680a0858dcabfd852c
 
 build:
-  number: 3
+  number: 0
   entry_points:
     - isd_generate = ale.isd_generate:main
   skip: true  # [py2k]

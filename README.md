@@ -336,4 +336,5 @@ Feedstock Maintainers
 * [@chkim-usgs](https://github.com/chkim-usgs/)
 * [@jessemapel](https://github.com/jessemapel/)
 * [@jlaura](https://github.com/jlaura/)
+* [@kelvinrr](https://github.com/kelvinrr/)
 

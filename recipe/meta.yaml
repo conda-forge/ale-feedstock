@@ -12,7 +12,7 @@ build:
   number: 0
   entry_points:
     - isd_generate = ale.isd_generate:main
-  skip: true  # [win and py2k]
+  skip: true  # [win]
 
 requirements:
   build:

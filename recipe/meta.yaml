@@ -9,7 +9,7 @@ source:
   sha256: 60acafd7048eb250549267d7bfff23787742bc7cac5539680a0858dcabfd852c
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - isd_generate = ale.isd_generate:main
   skip: true  # [win]
@@ -38,7 +38,7 @@ requirements:
     - pytz
     - scipy >=1.4.0
     - spiceypy >=2.3.0
-    - spiceql >=1.2.3,<2
+    - spiceql >=1.2.3,<1.2.4
     - requests
     - pyyaml
     - setuptools

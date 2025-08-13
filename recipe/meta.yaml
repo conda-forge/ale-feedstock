@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/DOI-USGS/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: a104ed01cd379506cef60b1c7890c48355adc12cfa6e1f8cd8cc3c1f758df078
+  sha256: 29ba846f71f6d98432e44fa0cafeee81a4acd031bdc1544800ee3ba20842579b
 
 build:
   number: 0

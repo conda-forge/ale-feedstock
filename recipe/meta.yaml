@@ -1,5 +1,5 @@
 {% set name = "ale" %}
-{% set version = "1.0.0" %}
+{% set version = "1.0.1" %}
 package:
   name: {{ name|lower }}
   version: {{ version }}
@@ -9,7 +9,7 @@ source:
   sha256: a104ed01cd379506cef60b1c7890c48355adc12cfa6e1f8cd8cc3c1f758df078
 
 build:
-  number: 3
+  number: 0
   entry_points:
     - isd_generate = ale.isd_generate:main
   skip: true  # [win]

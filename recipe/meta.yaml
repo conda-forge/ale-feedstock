@@ -9,7 +9,7 @@ source:
   sha256: 7ace617c9c69a31ff6c348356011c0d99709cf012f4097b2892b0ac233e4021b
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - isd_generate = ale.isd_generate:main
   skip: true  # [win]

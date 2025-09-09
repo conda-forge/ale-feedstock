@@ -38,7 +38,7 @@ requirements:
     - pytz
     - scipy >=1.4.0
     - spiceypy >=2.3.0
-    - spiceql >=1.2.3,<1.2.4
+    - spiceql >=1.2.4,<2
     - requests
     - pyyaml
     - setuptools

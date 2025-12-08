@@ -1,22 +1,22 @@
 {% set name = "ale" %}
-{% set version = "1.0.2" %}
+{% set version = "0.11.1" %}
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
   url: https://github.com/DOI-USGS/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 7ace617c9c69a31ff6c348356011c0d99709cf012f4097b2892b0ac233e4021b
+  sha256: 4922559a9617226e20fe58e9122281630855126d5239e832df567e6d5ec5e688
 
 build:
-  number: 1
+  number: 0
   entry_points:
     - isd_generate = ale.isd_generate:main
-  skip: true  # [win]
+  skip: true  # [py2k]
 
 requirements:
   build:
-    - python
+    - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - {{ compiler('cxx') }}
     - {{ stdlib("c") }}
@@ -38,8 +38,6 @@ requirements:
     - pytz
     - scipy >=1.4.0
     - spiceypy >=2.3.0
-    - spiceql >=1.2.4,<2
-    - requests
     - pyyaml
     - setuptools
     - brotli-python

@@ -1,15 +1,15 @@
 {% set name = "ale" %}
-{% set version = "1.0.2" %}
+{% set version = "0.11.1" %}
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
   url: https://github.com/DOI-USGS/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 7ace617c9c69a31ff6c348356011c0d99709cf012f4097b2892b0ac233e4021b
+  sha256: 5d170264de486b31ec0c3aaa51c40357665f1e49e7d3f27bb60673d5b882c6a1
 
 build:
-  number: 1
+  number: 0
   entry_points:
     - isd_generate = ale.isd_generate:main
   skip: true  # [win]
@@ -38,8 +38,6 @@ requirements:
     - pytz
     - scipy >=1.4.0
     - spiceypy >=2.3.0
-    - spiceql >=1.2.4,<2
-    - requests
     - pyyaml
     - setuptools
     - brotli-python

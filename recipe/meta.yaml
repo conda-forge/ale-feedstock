@@ -12,11 +12,11 @@ build:
   number: 0
   entry_points:
     - isd_generate = ale.isd_generate:main
-  skip: true  # [py2k]
+  skip: true  # [win]
 
 requirements:
   build:
-    - python                                 # [build_platform != target_platform]
+    - python
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - {{ compiler('cxx') }}
     - {{ stdlib("c") }}

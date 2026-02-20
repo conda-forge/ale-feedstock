@@ -1,12 +1,12 @@
 {% set name = "ale" %}
-{% set version = "1.1.0" %}
+{% set version = "1.1.1" %}
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
   url: https://github.com/DOI-USGS/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 942f5e3dc1daa5ef7de17d28bf0ad04c7ab7aac3ea9746550c5dd5fe51935524
+  sha256: d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed
 
 build:
   number: 0

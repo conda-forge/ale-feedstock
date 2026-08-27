@@ -7,6 +7,8 @@ package:
 source:
   url: https://github.com/DOI-USGS/{{ name }}/archive/{{ version }}.tar.gz
   sha256: 79bc4b4c60aa0a6523722e45aac97c8408e4f43f1828113a2ca8c329de200fd8
+  patches:
+    - patches/0003-Fix-setup.py-to-properly-install-when-running-pip-in.patch
 
 build:
   number: 0
@@ -16,7 +18,6 @@ build:
 
 requirements:
   build:
-    - python
     - eigen
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - {{ compiler('cxx') }}

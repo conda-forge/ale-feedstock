@@ -24,7 +24,7 @@ requirements:
     - make
     - swig
   host:
-    - eigen >=3,<4
+    - eigen
     - nlohmann_json =3.11.2
     - python
     - pip

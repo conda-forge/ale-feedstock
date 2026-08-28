@@ -9,3 +9,4 @@ github:
 provider:
   linux_aarch64: emulated
 test: native_and_emulated
+conda_solver: libmamba
